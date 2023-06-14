@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+/* layout */
+.layout {
+  max-width: 1200px;
+  min-width: 800px;
+  margin: 0 auto; /* 왼쪽 벽에서 떄기 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-label {
+  font-size: 16px;
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* 맨 위에 My Todo List, React */
+.top-title {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* 제목, 내용, 추가하기 */
+.add-form {
+  background-color: #eee;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-form,
+.input-container {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.add-title-content {
+  width: 240px;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 12px;
+  border: none;
+}
+
+.add-button {
+  width: 140px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: teal;
+  color: #eee;
+}
+
+/* 카드 컨테이너 */
+.list-container {
+  padding: 0 24px; /* 카드 박스 옆으로 붙이기? */
+}
+
+.todo-container {
+  width: 270px;
+  border: 4px solid teal;
+  border-radius: 12px;
+  padding: 12px 24px 24px;
+}
+
+/* list 카드 추가할 때 가로 정렬 */
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* 삭제, 완료 버튼 */
+.button-set {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.button {
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  width: 50%;
+}
+
+.todo-delete-button {
+  background-color: #fff;
+  border: 2px solid red;
+}
+
+.todo-complete-button {
+  background-color: #fff;
+  border: 2px solid green;
 }
