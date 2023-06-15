@@ -13,8 +13,8 @@ https://todo-list-seven-blond-89.vercel.app/
 <br >
 <br >
 
-# 📸스크린샷
-![image](https://github.com/leesoojinn/TodoList/assets/121027702/46f2f2fc-130d-4bcf-8462-68a3807b01c9)
+# 📸GIF
+![jun-15-2023_21-26-19_360](https://github.com/leesoojinn/TodoList/assets/121027702/b8868cf2-b8bb-4c7b-9def-5cbc644f5f31)
 <br >
 <br >
 
