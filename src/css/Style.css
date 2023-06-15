@@ -53,8 +53,8 @@
 }
 
 /* 카드 컨테이너 */
-.list-container {
-  padding: 0 24px; /* 카드 박스 옆으로 붙이기? */
+.list-title {
+  padding: 0 24px;
 }
 
 .todo-container {
@@ -65,10 +65,11 @@
 }
 
 /* list 카드 추가할 때 가로 정렬 */
-.list-wrapper {
+.list-container-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  padding: 0 24px;
 }
 
 /* 삭제, 완료 버튼 */
@@ -90,7 +91,7 @@
   border: 2px solid red;
 }
 
-.todo-complete-button {
+.todo-complete-cancel-button {
   background-color: #fff;
   border: 2px solid green;
 }
