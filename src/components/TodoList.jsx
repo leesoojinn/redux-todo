@@ -22,6 +22,10 @@ function App() {
 
   const clickAddButtonHandler = (e) => {
     e.preventDefault(); // 폼 제출 방지. 추가하기 누르면 바로 사라짐
+    if (!title || !content) {
+      // 제목, 내용 비어있을 떄
+      return;
+    }
 
     // 추가 버튼 클릭
     const newTodo = {
@@ -93,9 +97,7 @@ function App() {
       <div>
         <h2 className="list-title">Working</h2>
       </div>
-      {/* 가로 정렬 */}
       <div className="list-container-wrapper">
-        {/* key 값은 맨위에 두기 */}
         {todolist.map((item) => {
           return (
             <TodoContainer
