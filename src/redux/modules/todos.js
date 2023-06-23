@@ -35,7 +35,7 @@ export const addTodo = (payload) => {
 };
 
 // todo 제거
-export const deleteTodo = (payload) => {
+export const deletTodo = (payload) => {
   return {
     type: DELETE_TODO,
     payload,
