@@ -11,6 +11,8 @@ React 활용하여 만든 TodoList 앱
 # 🖇️사이트 주소
 https://todo-list-seven-blond-89.vercel.app/
 <br >
+https://redux-todo-snowy.vercel.app/
+<br >
 <br >
 
 # 📸GIF
