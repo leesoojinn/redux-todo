@@ -1,9 +1,4 @@
 /* layout */
-.layout {
-  max-width: 1200px;
-  min-width: 800px;
-  margin: 0 auto; /* 왼쪽 벽에서 떄기 */
-}
 
 .form-label {
   font-size: 16px;
@@ -11,13 +6,6 @@
 }
 
 /* 맨 위에 My Todo List, React */
-.top-title {
-  align-items: center;
-  display: flex;
-  height: 50px;
-  justify-content: space-between;
-  padding: 0 20px;
-}
 
 /* 제목, 내용, 추가하기 */
 .add-form {
