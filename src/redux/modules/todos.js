@@ -1,38 +1,74 @@
-// 액션 타입 정의
-const ADD_TODO = "todos/ADD_TODO";
-const REMOVE_TODO = "todos/REMOVE_TODO";
+import { nanoid } from "nanoid";
 
-// 액션 생성 함수
-export const addTodo = (todo) => ({
-  type: ADD_TODO,
-  payload: todo,
-});
+const initialState = [
+  {
+    id: nanoid(),
+    title: "리액트",
+    content: "리액트를 배워봅시다",
+    isDone: false,
+  },
+  {
+    id: nanoid(),
+    title: "리액트",
+    content: "리액트를 배워봅시다",
+    isDone: false,
+  },
+  {
+    id: nanoid(),
+    title: "리액트",
+    content: "리액트를 배워봅시다",
+    isDone: false,
+  },
+];
 
-export const removeTodo = (id) => ({
-  type: REMOVE_TODO,
-  payload: id,
-});
+// action value
+const ADD_TODO = "ADD_TODO";
+const DELETE_TODO = "DELETE_TODO";
+const STATUS_TODO = "STATUS_TODO";
 
-// 초기 상태 정의
-const initialState = {
-  todos: [
-    { id: 1, title: "리액트 공부하기", content: "리액트 기초를 공부해봅시다" },
-  ],
+// todo 추가
+export const addTodo = (payload) => {
+  return {
+    type: ADD_TODO,
+    payload,
+  };
 };
 
-// 리듀서 함수
+// todo 제거
+export const deleteTodo = (payload) => {
+  return {
+    type: DELETE_TODO,
+    payload,
+  };
+};
+
+// todo isDone 변경
+export const statusTodo = (payload) => {
+  return {
+    type: STATUS_TODO,
+    payload,
+  };
+};
+
 const todos = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
-      return {
-        ...state,
-        todos: [...state.todos, action.payload],
-      };
-    case REMOVE_TODO:
-      return {
-        ...state,
-        todos: state.todos.filter((todo) => todo.id !== action.payload),
-      };
+      return [...state, action.payload];
+    case DELETE_TODO:
+      return state.filter((todo) => {
+        return todo.id !== action.payload;
+      });
+    case STATUS_TODO:
+      return state.map((todo) => {
+        if (todo.id === action.payload) {
+          return {
+            ...todo,
+            isDone: !todo.isDone,
+          };
+        } else {
+          return todo;
+        }
+      });
     default:
       return state;
   }
